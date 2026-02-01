@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Lady AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar with branding -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo-icon">💪</div>
+                <h1>Iron Lady</h1>
+                <p class="tagline">Your AI-Powered Fitness & Empowerment Guide</p>
+            </div>
+            <div class="features-section">
+                <h3>Features</h3>
+                <ul>
+                    <li>✨ Personalized Program Recommendations</li>
+                    <li>🎯 Fitness Goal Planning</li>
+                    <li>👥 Community Connection</li>
+                    <li>📚 Expert Guidance</li>
+                    <li>⏰ Flexible Scheduling</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h2>Welcome to Iron Lady Assistant</h2>
+                <p>Discover your strength, transform your journey</p>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div class="chat-container" id="chatContainer">
+                <div class="message bot-message initial-message">
+                    <div class="message-content">
+                        <p>💪 <strong>Hello, welcome to Iron Lady!</strong></p>
+                        <p>I'm your personal AI assistant, here to help you discover the perfect fitness program and support your empowerment journey. Whether you're just starting out or looking to level up, I've got you covered!</p>
+                        <div class="quick-actions">
+                            <button class="quick-btn" onclick="handleQuickAction('explore_programs')">Explore Programs</button>
+                            <button class="quick-btn" onclick="handleQuickAction('fitness_goals')">Set Fitness Goals</button>
+                            <button class="quick-btn" onclick="handleQuickAction('services_pricing')">Services & Pricing</button>
+                            <button class="quick-btn" onclick="handleQuickAction('success_stories')">Success Stories</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="userInput" 
+                        placeholder="Ask me anything about Iron Lady programs..."
+                        autocomplete="off"
+                    >
+                    <button class="send-btn" onclick="sendMessage()">
+                        <span>Send</span>
+                        <span class="send-icon">➤</span>
+                    </button>
+                </div>
+                <div class="input-suggestions">
+                    <span class="suggestion-label">Try asking:</span>
+                    <button class="suggestion-btn" onclick="setInput('What programs are available?')">What programs are available?</button>
+                    <button class="suggestion-btn" onclick="setInput('Which program is best for beginners?')">Best for beginners?</button>
+                    <button class="suggestion-btn" onclick="setInput('How much does it cost?')">Pricing info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
